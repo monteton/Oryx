@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORYX MIRLO /// АНИМАЦИОННЫЙ СЕРИАЛ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* -- CORE STYLES -- */
+        :root {
+            --color-background: #111111;
+            --color-panel-bg: #1A1A1A;
+            --color-text: #BDBDBD;
+            --color-text-bright: #F5F5F5;
+            --color-accent-rust: #D35400;
+            --color-accent-tech: #00A896; /* Цвет для неона */
+            --font-main: 'Work Sans', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-main);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* -- HEADER & LOGO -- */
+        .site-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .site-header h1 {
+            font-family: var(--font-mono);
+            font-size: 2.5em;
+            color: var(--color-text-bright);
+            margin: 0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .site-header .subtitle {
+            font-family: var(--font-mono);
+            color: var(--color-accent-tech);
+            font-size: 0.9em;
+            letter-spacing: 2px;
+        }
+
+        /* -- BANNER -- */
+        .banner-container {
+            margin-bottom: 40px;
+            border: 1px solid #333;
+            padding: 8px;
+            background-color: var(--color-panel-bg);
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: #000;
+        }
+
+        /* -- CONTENT PANEL -- */
+        .content-panel {
+            background-color: var(--color-panel-bg);
+            border: 1px solid #333;
+            padding: 25px 30px;
+        }
+
+        .panel-title {
+            font-family: var(--font-mono);
+            color: var(--color-accent-rust);
+            font-size: 1.2em;
+            margin: 0 0 20px 0;
+            letter-spacing: 1px;
+        }
+
+        b {
+            color: var(--color-text-bright);
+            font-weight: 600;
+        }
+
+        /* -- FOOTER -- */
+        .site-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-family: var(--font-mono);
+            font-size: 0.8em;
+            color: #555;
+            letter-spacing: 1px;
+        }
+
+        /* -- СТИЛИ ДЛЯ НЕОНОВЫХ ИКОНОК -- */
+        .social-links-container {
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .social-item svg {
+            width: 42px;
+            height: 42px;
+            fill: #fff;
+            transition: all 0.3s ease;
+            animation: neon-pulse 3s infinite alternate;
+            filter: drop-shadow(0 0 3px #fff) 
+                    drop-shadow(0 0 8px var(--color-accent-tech)) 
+                    drop-shadow(0 0 15px var(--color-accent-tech));
+        }
+
+        .social-item:hover svg {
+            animation-duration: 1.5s;
+            filter: drop-shadow(0 0 5px #fff) 
+                    drop-shadow(0 0 15px var(--color-accent-tech)) 
+                    drop-shadow(0 0 30px var(--color-accent-tech));
+        }
+        
+        .icon-label {
+            margin-top: 10px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--color-text);
+            transition: color 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .social-item:hover .icon-label {
+            color: var(--color-accent-rust); /* Подсвечиваем текст при наведении */
+        }
+
+        @keyframes neon-pulse {
+            from {
+                filter: drop-shadow(0 0 3px #fff) 
+                        drop-shadow(0 0 8px var(--color-accent-tech)) 
+                        drop-shadow(0 0 15px var(--color-accent-tech));
+            }
+            to {
+                filter: drop-shadow(0 0 5px #fff) 
+                        drop-shadow(0 0 12px var(--color-accent-tech)) 
+                        drop-shadow(0 0 25px var(--color-accent-tech));
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="site-header">
+            <h1>ORYX MIRLO</h1>
+            <div class="subtitle">// SCRAP-WORLD FOUNDRY //</div>
+        </header>
+
+        <main>
+            <section class="banner-container">
+                <img src="banner.png" alt="Панорамный вид на город в кратере">
+            </section>
+            
+            <section class="social-links-container">
+                <div class="social-links">
+                    <!-- Telegram -->
+                    <a href="https://t.me/OryxMirlo" target="_blank" class="social-item">
+                        <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        <span class="icon-label">TELEGRAM</span>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@oryxMirlo" target="_blank" class="social-item">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <span class="icon-label">YOUTUBE</span>
+                    </a>
+                    <!-- TikTok (НОВАЯ ИКОНКА) -->
+                    <a href="https://www.tiktok.com/@oryx.mirlo" target="_blank" class="social-item">
+                         <svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97v7.47c0 2.92-2.36 5.28-5.28 5.28-2.92 0-5.28-2.36-5.28-5.28s2.36-5.28 5.28-5.28c.16 0 .33.01.49.03v4.03c-1.45-.05-2.89-.35-4.2-.97v-7.47a5.28 5.28 0 0 1 4.36-5.12V0h4.03v.02z"/></svg>
+                        <span class="icon-label">TIKTOK</span>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/oryxmirlo" target="_blank" class="social-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.74 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98C23.986 15.667 24 15.26 24 12s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                        <span class="icon-label">INSTAGRAM</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="content-panel">
+                <h2 class="panel-title">[ВХОДЯЩАЯ ТРАНСЛЯЦИЯ]</h2>
+                <p>
+                    Вы попали на официальный ресурс, посвященный анимационному сериалу <b>ORYX MIRLO</b>. Это история об Ориксе — главном герое, инженере и исследователе мира, собранного из обломков забытой цивилизации. Вместе со своим верным компаньоном, дроном Лёхой, он путешествует по гигантским городам из металлолома и бескрайним пустыням.
+                </p>
+                <p>
+                    Присоединяйтесь к их приключениям в хаотичной, но полной жизни вселенной, где изобретательность — главное оружие, а каждая ржавая деталь может стать ключом к разгадке тайн прошлого. Эта трансляция — ваш пропуск в их мир.
+                </p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>SYSTEM STATUS: ONLINE /// &copy; 2025 ORYX MIRLO</p>
+        </footer>
+    </div>
+</body>
+</html>
